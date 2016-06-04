@@ -1,1 +1,4 @@
-.DS_Store
+#Generated book files
+_book/
+.bak
+book.json
