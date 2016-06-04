@@ -64,7 +64,7 @@ for step in range(100):
 
 The key here is understanding what `temp` is and what the `mult` function does.
 
-The syntax for constructing `temp` is a little confusing, but after some deciphering we can see that it's an array, where its first value is curr[0] (`[[curr[0]]`), the last value is cur[n - 1], and the second to penultimate values are 2 * curr[x+1] + 0.5 * (curr[x] - 2 * curr[x + 1] + curr[x + 2]). For simplicity purposes, I will write this array out as a vertical vector, using a, b, c, d, and e to represent each element in curr, assuming a length of 5. For that, `temp` would look like this:
+The syntax for constructing `temp` is a little confusing, but after some deciphering we can see that it's an array, where its first value is `curr[0]` (`[[curr[0]]`), the last value is cur[n - 1], and the second to penultimate values are 2 * curr[x+1] + 0.5 * (curr[x] - 2 * curr[x + 1] + curr[x + 2]). For simplicity purposes, I will write this array out as a vertical vector, using a, b, c, d, and e to represent each element in curr, assuming a length of 5. For that, `temp` would look like this:
 
 ```
 | a                    |
