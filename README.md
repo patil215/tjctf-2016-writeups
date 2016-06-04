@@ -16,7 +16,7 @@ __/ =| o |=-~~\\  /~~\\  /~~\\  /~~\\ ____Y___________|__  |____________________
 </pre>
 </marquee>
 
-CTFs (Capture-the-Flag) are competitions where contestants must solve a series of challenges, each of which contains a flag (typically a hidden string of text). The challenges range from web exploits to reverse engineering to cryptography. TJCTF is one such competition created by the [TJ Computer Security Club](https://github.com/tjcsec), an organization dedicated to creating and running CTF problems.
+CTFs (Capture-the-Flag) are competitions where contestants must solve a series of challenges, each of which contains a flag (typically a hidden string of text). The challenges range from web exploits to reverse engineering to cryptography. TJCTF is one such competition created by the [TJ Computer Security Club](https://github.com/tjcsec).
 
 We are Steam Locomotive, a team of high school students from the [Liberal Arts and Science Academy in Austin, TX](http://www.lasahighschool.org/). We are:
 * Ehsan Asdar - [ehsanmasdar](https://github.com/ehsanmasdar)
