@@ -157,7 +157,7 @@ Looking at the full contents of `SHOW LIST RELEVANT` and `SHOW LIBRARY`, we can 
 
 For example, one of the items in the relevant list is `631.3/0942 1`. This corresponds with a book `631.3/0942        :: 0238788202` from the library. The `1` (second number) is probably an index within the book, so it's probably `2` (from the second number of the book). Each line of the relevant list has two or three items on it - maybe the numbers we get will correspond to EBCDIC characters, and if we do this for every item in the relevant list, we'll get some sort of message. 
 
-Looking up every item in the relevant list, getting the numbers, and converting to EBCDIC, we get `THIS IS NOT THE FLAG`. It isn't the flag, but we're close - it means we're using the correct encoding! We just need to encode `SHOW LIST IRRELEVANT` as in the same way.
+Looking up every item in the relevant list, getting the numbers, and converting to EBCDIC, we get `THIS IS NOT YOUR FLAG`. It isn't the flag, but we're close - it means we're using the correct encoding! We just need to encode `SHOW LIST IRRELEVANT` as in the same way.
 
 We convert `SHOW LIST IRRELEVANT` to EBCDIC, then put it in terms of things that can be looked up in the dictionary. For example, if we want to make the letter S, we could do this:
 
