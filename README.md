@@ -25,6 +25,6 @@ We are Steam Locomotive, a team of high school students from the [Liberal Arts a
 * Neil Patil - [patil215](https://github.com/patil215)
 * John - [Jumboperson](https://github.com/jumboperson)
 
-During TJCTF, we accumulated a total of 3030 points and finished in 3rd place.
+During TJCTF, we accumulated a total of <fill in> points and finished in 3rd place.
 
 If you found these write-ups helpful, be sure to star the repository on [Github](https://github.com/Steam-Locomotive/TJCTF-Write-ups/)!
