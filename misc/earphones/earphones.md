@@ -7,7 +7,7 @@ and a chorus of [cicadas](https://raw.githubusercontent.com/TJCSec/tjctf-1516-re
 ## Answer ##
 
 ### Overview ###
-Use the [Z3](https://github.com/Z3Prover/z3) to solve for each letter.
+Use [Z3](https://github.com/Z3Prover/z3) to solve for the numerical value of each letter.
 
 ### Details ###
 Opening the text file, we see a series of equations in which various letters have taken the place of digits. At the top of the file is the encrypted flag:
