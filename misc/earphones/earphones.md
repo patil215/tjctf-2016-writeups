@@ -67,7 +67,7 @@ def gen_test(line):
     return ' '.join(split)
 ```
 
-Putting this all together, Z3 works it's magic and we get the following output
+Putting this all together, Z3 works its magic and we get the following output
 ```
 sat
 [r = 2,
