@@ -1,3 +1,6 @@
+# roverctl - 100 (Misc)
+#### Writeup by Neil Patil
+
 ## Problem ##
 Looks like the backdoor you installed on *Pathfinder* is working; you've captured [these packets](rover.pcapng). But what do they all mean? [Maybe this will help.](roverctl.pdf)
 
@@ -103,5 +106,4 @@ for shift in range(0, 16):
 The script works and we get the flag.
 
 ### Flag ###
-
-tjctf{i_lik3_potat03s}
+  tjctf{i_lik3_potat03s}
