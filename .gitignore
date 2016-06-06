@@ -2,3 +2,4 @@
 _book/
 .bak
 book.json
+.DS_Store
