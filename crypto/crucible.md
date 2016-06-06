@@ -1,4 +1,7 @@
-### Problem ###
+# Crucible - 140 (Cryptography)
+#### Writeup by Neil Patil
+
+## Problem ##
 [crucible.py](crucible.py) [matrix.py](matrix.py) [encrypted.txt](encrypted.txt)
 
 ## Answer ##
@@ -190,3 +193,5 @@ for i in nums:
     flag += chr(int(round(i)))
 print flag
 ```
+### Flag ###
+  tjctf{SGoeIvteuronmjAieDx}

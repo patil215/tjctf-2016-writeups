@@ -1,3 +1,6 @@
+# Contingency - 120 (Misc)
+#### Writeup by Neil Patil
+
 ## Problem ##
 Control wants some information from the irrelevant list, but you're locked out. Can you figure out Research's secret encoding scheme? nc p.tjctf.org 8002
 
@@ -29,7 +32,7 @@ DOCUMENT PROCESSORS
 ...
 ...
 
-NORTHERNLIGHTS LOGIN: 
+NORTHERNLIGHTS LOGIN:
 ```
 
 We don't know any of the necessary information to log in. However, this sequence seems oddly specific. Let's see if we can login info through some searching. Doing a Google Search for "CORE ANALYTICS NEURAL NETWORKS HEURISTIC ENGINES NORTHERN LIGHTS" (a few of the phrases from the boot sequence as well as the phrase northern lights) pulls up this [Wiki page](http://personofinterest.wikia.com/wiki/The_Machine) which seems to match quite well. It seems that this program is a copy of The Machine from this TV show *Person of Interest*!
@@ -52,7 +55,7 @@ SHOW: SHOW RUNNING SYSTEM PROPERTIES
 OVERRIDE: ENTER ENCODED COMMAND, BYPASSING ALL PERMISSIONS
 ```
 
-Hm. There's a relevant and irrelevant list - the problem statement says we want something from the irrelevant list. However, trying `SHOW LIST IRRELEVANT` gives 
+Hm. There's a relevant and irrelevant list - the problem statement says we want something from the irrelevant list. However, trying `SHOW LIST IRRELEVANT` gives
 
 ```
 PERMISSIONS RESTRICTED
@@ -155,7 +158,7 @@ There's something interesting [here](http://personofinterest.wikia.com/wiki/The_
 
 Looking at the full contents of `SHOW LIST RELEVANT` and `SHOW LIBRARY`, we can see that the relevant list is composed of numbers under the Dewey Decimal system followed by a single digit number, for example `273/.4 6`. Interestingly, the Dewey Decimal numbers correspond to lines in the library! Perhaps the second number is an index to look up within each book in the library.
 
-For example, one of the items in the relevant list is `631.3/0942 1`. This corresponds with a book `631.3/0942        :: 0238788202` from the library. The `1` (second number) is probably an index within the book, so it's probably `2` (from the second number of the book). Each line of the relevant list has two or three items on it - maybe the numbers we get will correspond to EBCDIC characters, and if we do this for every item in the relevant list, we'll get some sort of message. 
+For example, one of the items in the relevant list is `631.3/0942 1`. This corresponds with a book `631.3/0942        :: 0238788202` from the library. The `1` (second number) is probably an index within the book, so it's probably `2` (from the second number of the book). Each line of the relevant list has two or three items on it - maybe the numbers we get will correspond to EBCDIC characters, and if we do this for every item in the relevant list, we'll get some sort of message.
 
 Looking up every item in the relevant list, getting the numbers, and converting to EBCDIC, we get `THIS IS NOT YOUR FLAG`. It isn't the flag, but we're close - it means we're using the correct encoding! We just need to encode `SHOW LIST IRRELEVANT` as in the same way.
 
@@ -264,4 +267,4 @@ Converting that back to EBCDIC using the method above, we get:
 And finally, converting that to ASCII, we get our flag!
 
 ### Flag ###
-tjctf{w3lc0m3_to_th3_m4ch1n3}
+  tjctf{w3lc0m3_to_th3_m4ch1n3}
