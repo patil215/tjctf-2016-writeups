@@ -7,7 +7,7 @@ and a chorus of [cicadas](https://raw.githubusercontent.com/TJCSec/tjctf-1516-re
 ## Answer ##
 
 ### Overview ###
-Use the [Z3](https://github.com/Z3Prover/z3) to solve for each letter.
+Use [Z3](https://github.com/Z3Prover/z3) to solve for the numerical value of each letter.
 
 ### Details ###
 Opening the text file, we see a series of equations in which various letters have taken the place of digits. At the top of the file is the encrypted flag:
@@ -40,7 +40,7 @@ The array `d` now contains references to all our variables. The only thing left 
 1. Convert numbers into a Z3 understandable form (composed of digits represented by letters)
 2. Make sure Z3 understands that order of operations does not apply.
 
-Z3 won't inherently recognize multiple letters in a row as digits that form larger numbers. Instead, Z3 only recognizes each discrete letter as a number between 0 through 9. To solve this I parsed every "number" and rewrote it using multiplication by powers of 10 to preserve place. For example, the number `abc` would become `a*10^2 + b*10^1 + c*10^0`. The following python code took care of referencing each number and converting it to the form I just described.
+Z3 won't inherently recognize multiple letters in a row as digits that form larger numbers. Instead, Z3 only recognizes each discrete letter as a number between 0 and 9. To solve this I parsed every "number" and rewrote it using multiplication by powers of 10 to preserve place. For example, the number `abc` would become `a*10^2 + b*10^1 + c*10^0`. The following python code took care of converting each number to the form I just described.
 ```python
 def convertNum(num):
     out = ""
@@ -54,7 +54,7 @@ def convertNum(num):
                     out += 'd[' + str(i) + '] * 10**' + str(len(num) - j - 1) + ' + '
 ```
 
-To make Z3 ignore order of operations, I wrapped the expressions in a layer of parentheses following each mathematical operation. This python code took care of doing that (there were exactly the same number of operations performed for each example):
+To make Z3 ignore order of operations I wrapped the expressions in layers of parentheses. This python code took care of doing that (there were exactly the same number of operations performed for each example):
 ```python
 def gen_test(line):
     split = line.split(' ')
@@ -67,7 +67,7 @@ def gen_test(line):
     return ' '.join(split)
 ```
 
-Putting this all together, Z3 works it's magic and we get the following output
+Putting this all together, Z3 works its magic and we get the following output
 ```
 sat
 [r = 2,
