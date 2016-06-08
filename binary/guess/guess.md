@@ -1,4 +1,4 @@
-# guess - 140 (Binary)
+# guess - 120 (Binary)
 #### Writeup by Ehsan Asdar
 
 ## Problem ##
