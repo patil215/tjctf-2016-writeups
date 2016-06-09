@@ -1,4 +1,4 @@
-# guess - 140 (Binary)
+# guess - 120 (Binary)
 #### Writeup by Ehsan Asdar
 
 ## Problem ##
@@ -10,7 +10,7 @@ Can you guess the numbers? guess.c guess nc p.tjctf.org 8007
 Implement srand with the same time-based seed used by the server.
 
 ### Details ###
-Reading the source in `guess.c`, we see that the program calls `srand()` with the current system time in seconds (`time(NULL)`) and then calls `rand()` to get a random number. Since C random implments a  [Pseudorandom number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator), we can get the exact same number `rand()` generates simply by seeding another c program with the same time value. The follow C and Python code took care of this.
+Reading the source in `guess.c`, we see that the program calls `srand()` with the current system time in seconds (`time(NULL)`) and then calls `rand()` to get a random number. Since C random implments a  [Pseudorandom number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator), we can get the exact same number `rand()` generates simply by seeding another C program with the same time value. The follow C and Python code took care of this.
 
 solve.py:
 ```python
