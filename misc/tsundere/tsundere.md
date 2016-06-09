@@ -40,7 +40,7 @@ public static void main(String[] var0) {
 }
 ```
 
-First, we check to make sure every character of the input is either a lowercase letter or a string. Then we split up the string into chunks of 5 and append the result of calling `routine1` on each chunk of 5 characters. Finally, we check this output with a hardcoded string to determine if our flag is right. At this point I set off on reversing `routine1`. The work I did to reverse it can be found [here](tsundere.java).
+First, we check to make sure every character of the input is either a lowercase letter or a number. Then we split up the string into chunks of 5 and append the result of calling `routine1` on each chunk of 5 characters. Finally, we check this output with a hardcoded string to determine if our flag is right. At this point I set off on reversing `routine1`. The work I did to reverse it can be found [here](tsundere.java).
 
 At the point where I stopped working on `routine1` (the method is incomplete) I decided to take a step back and think about what the function was doing. It used a lot of seemingly random and certainly destructive bit shifts, among other weird loops and calls (such as Math.sin() at one point). I checked if the length of the final output string was divisible by 32, and it was. That made `routine1` seem very suspicious. Guessing that `routine1` was an implementation of md5 called on 5 character blocks of the input string, I split the output string into blocks of 32 and decrypted each one using [hashkiller](https://hashkiller.co.uk/md5-decrypter.aspx). My hunch was correct, and we got the flag!
 
