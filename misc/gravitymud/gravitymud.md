@@ -14,7 +14,7 @@ Explore the map and inspect all the items you run across until you have gathered
 
 gravitymud is simply a map that we can explore via netcat using the commands north, south, easy, west, up, down, and examine <item_to_examine>. The solution is to just explore the entire map, inspecting all the items that you come across.
 
-For example, after inspecting the rug in the giftshop, this portion of the flag can be recovered: tjctf{y0u_m1ght_h@v3_. There are also some items that upon being interacted with indicate what steps to take next, such as the paintedeye in the exhibithall which opens a stairway. The amount of paths is small enough that the entire thing can be explored "by hand" by using python socket commands.
+For example, after inspecting the rug in the giftshop, this portion of the flag can be recovered: tjctf{y0u_m1ght_h@v3_ . There are also some items that upon being interacted with indicate what steps to take next, such as the paintedeye in the exhibithall which opens a stairway. The amount of paths is small enough that the entire thing can be explored "by hand" by using python socket commands.
 
 The code below is the path that I took to find the last portion of the flag that I recovered.
 ```
