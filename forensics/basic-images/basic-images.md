@@ -2,7 +2,7 @@
 #### Writeup by GenericNickname
 
 ## Problem ##
-Check out my <a href="|shades.png|">shades</a>! If you want the flag, I guess you should be basic like me. Good luck!
+Check out my <a href="shades.png">shades</a>! If you want the flag, I guess you should be basic like me. Good luck!
 
 ## Answer ##
 
