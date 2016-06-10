@@ -1,4 +1,4 @@
-# Basic Images - 90 (Misc)
+# Basic Images - 65 (Forensics)
 #### Writeup by GenericNickname
 
 ## Problem ##
