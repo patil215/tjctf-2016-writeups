@@ -25,7 +25,7 @@ res = ''
 for y in range(0, i.height) :
     for x in range(0, i.width) :
             res += chr(dat[x,y][0])
-o = open('shades-out.png', 'wb')
+o = open('shades-out.txt', 'wb')
 o.write(res)
 o.close()
 ```
