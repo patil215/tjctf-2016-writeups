@@ -27,4 +27,4 @@ We are Steam Locomotive, a team of high school students from the [Liberal Arts a
 
 During TJCTF, we finished in 3rd place.
 
-If you found these write-ups helpful, be sure to star the repository on [Github](https://github.com/patil215/TJCTF-Write-ups/)!
+If you found these write-ups helpful, be sure to star the repository on [Github](https://github.com/patil215/tjctf-2016-writeups/)!
